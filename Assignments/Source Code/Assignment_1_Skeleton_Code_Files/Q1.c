@@ -45,19 +45,19 @@ void deallocate(struct student* stud){
      /*Deallocate memory from stud*/
 }
 
-//int main(){
-//    struct student* stud = NULL;
-//    
-//    /*Call allocate*/
-//    
-//    /*Call generate*/
-//    
-//    /*Call output*/
-//    
-//    /*Call summary*/
-//    
-//    /*Call deallocate*/
-//
-//    return 0;
-//}
+int main(){
+    struct student* stud = NULL;
+    
+    /*Call allocate*/
+    
+    /*Call generate*/
+    
+    /*Call output*/
+    
+    /*Call summary*/
+    
+    /*Call deallocate*/
+
+    return 0;
+}
 

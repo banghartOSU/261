@@ -30,17 +30,17 @@ void camelCase(char* word){
 	
 }
 
-//int main(){
-//
-//    /*Read the string from the keyboard*/
-//    
-//    
-//    /*Call camelCase*/
-//    
-//    
-//    /*Print the new string*/
-//    
-//    
-//    return 0;
-//}
+int main(){
+
+    /*Read the string from the keyboard*/
+    
+    
+    /*Call camelCase*/
+    
+    
+    /*Print the new string*/
+    
+    
+    return 0;
+}
 
