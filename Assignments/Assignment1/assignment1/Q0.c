@@ -9,30 +9,30 @@
 #include <time.h>
 
 void fooA(int* iptr){
-  
-     /*Print the value and address of the integer pointed to by iptr*/
+    
+    /*Print the value and address of the integer pointed to by iptr*/
     printf("%d %p\n", *iptr, iptr);
-          
-     /*Increment the value of the integer pointed to by iptr by 5*/
+    
+    /*Increment the value of the integer pointed to by iptr by 5*/
     *iptr += 5;
-          
-     /*Print the address of iptr itself*/
+    
+    /*Print the address of iptr itself*/
     printf("%p\n", &iptr);
     
     /*Dummy variable, ignore the warning*/
-   int c=5;  
+    int c=5;
 }
 
 
 void fooB(int* jptr){
-  
-     /*Print the value and address of the integer pointed to by jptr*/
+    
+    /*Print the value and address of the integer pointed to by jptr*/
     printf("%d %p\n", *jptr, jptr);
-               
-     /*Decrement the address by 1 pointed to by jptr using jptr */
+    
+    /*Decrement the address by 1 pointed to by jptr using jptr */
     jptr -= 1;
     
-     /*Print the address of jptr itself*/
+    /*Print the address of jptr itself*/
     printf("%p\n", &jptr);
 }
 
@@ -51,11 +51,11 @@ int main(){
     printf("%d\n",x);
     
     /*Call fooB() with the address of x*/
-   fooB(&x);
+    fooB(&x);
     
     /*Print the value and address of x*/
     printf("%d %p\n",x,&x);
- 
+    
     
     return 0;
 }

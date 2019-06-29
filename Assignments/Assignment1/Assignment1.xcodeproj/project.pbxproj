@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F39F8C022C5D9C900F0B3E3 /* Q0.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F39F8BC22C5D9C900F0B3E3 /* Q0.c */; };
+		4FF801A722C7BFB4009B83DF /* Q0.c in Sources */ = {isa = PBXBuildFile; fileRef = 4FF801A622C7BFB4009B83DF /* Q0.c */; };
+		4FF801A922C7BFC0009B83DF /* Q1.c in Sources */ = {isa = PBXBuildFile; fileRef = 4FF801A822C7BFC0009B83DF /* Q1.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4F39F8B022C5D9AE00F0B3E3 /* CopyFiles */ = {
+		4FF8019822C7BF04009B83DF /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +24,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4F39F8B222C5D9AE00F0B3E3 /* Assignment1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Assignment1; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F39F8BC22C5D9C900F0B3E3 /* Q0.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Q0.c; path = "../../Source Code/Assignment_1_Skeleton_Code_Files/Q0.c"; sourceTree = "<group>"; };
+		4FF8019A22C7BF04009B83DF /* assignment1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = assignment1; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FF801A622C7BFB4009B83DF /* Q0.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Q0.c; sourceTree = "<group>"; };
+		4FF801A822C7BFC0009B83DF /* Q1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Q1.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4F39F8AF22C5D9AE00F0B3E3 /* Frameworks */ = {
+		4FF8019722C7BF04009B83DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,94 +40,96 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F39F8A922C5D9AE00F0B3E3 = {
+		4FF8019122C7BF04009B83DF = {
 			isa = PBXGroup;
 			children = (
-				4F39F8B422C5D9AE00F0B3E3 /* Assignment1 */,
-				4F39F8B322C5D9AE00F0B3E3 /* Products */,
+				4FF8019C22C7BF04009B83DF /* assignment1 */,
+				4FF8019B22C7BF04009B83DF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4F39F8B322C5D9AE00F0B3E3 /* Products */ = {
+		4FF8019B22C7BF04009B83DF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F39F8B222C5D9AE00F0B3E3 /* Assignment1 */,
+				4FF8019A22C7BF04009B83DF /* assignment1 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4F39F8B422C5D9AE00F0B3E3 /* Assignment1 */ = {
+		4FF8019C22C7BF04009B83DF /* assignment1 */ = {
 			isa = PBXGroup;
 			children = (
-				4F39F8BC22C5D9C900F0B3E3 /* Q0.c */,
+				4FF801A622C7BFB4009B83DF /* Q0.c */,
+				4FF801A822C7BFC0009B83DF /* Q1.c */,
 			);
-			path = Assignment1;
+			path = assignment1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4F39F8B122C5D9AE00F0B3E3 /* Assignment1 */ = {
+		4FF8019922C7BF04009B83DF /* assignment1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F39F8B922C5D9AE00F0B3E3 /* Build configuration list for PBXNativeTarget "Assignment1" */;
+			buildConfigurationList = 4FF801A122C7BF04009B83DF /* Build configuration list for PBXNativeTarget "assignment1" */;
 			buildPhases = (
-				4F39F8AE22C5D9AE00F0B3E3 /* Sources */,
-				4F39F8AF22C5D9AE00F0B3E3 /* Frameworks */,
-				4F39F8B022C5D9AE00F0B3E3 /* CopyFiles */,
+				4FF8019622C7BF04009B83DF /* Sources */,
+				4FF8019722C7BF04009B83DF /* Frameworks */,
+				4FF8019822C7BF04009B83DF /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Assignment1;
-			productName = Assignment1;
-			productReference = 4F39F8B222C5D9AE00F0B3E3 /* Assignment1 */;
+			name = assignment1;
+			productName = assignment1;
+			productReference = 4FF8019A22C7BF04009B83DF /* assignment1 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4F39F8AA22C5D9AE00F0B3E3 /* Project object */ = {
+		4FF8019222C7BF04009B83DF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Thomas Banghart";
 				TargetAttributes = {
-					4F39F8B122C5D9AE00F0B3E3 = {
+					4FF8019922C7BF04009B83DF = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 4F39F8AD22C5D9AE00F0B3E3 /* Build configuration list for PBXProject "Assignment1" */;
+			buildConfigurationList = 4FF8019522C7BF04009B83DF /* Build configuration list for PBXProject "assignment1" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 4F39F8A922C5D9AE00F0B3E3;
-			productRefGroup = 4F39F8B322C5D9AE00F0B3E3 /* Products */;
+			mainGroup = 4FF8019122C7BF04009B83DF;
+			productRefGroup = 4FF8019B22C7BF04009B83DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F39F8B122C5D9AE00F0B3E3 /* Assignment1 */,
+				4FF8019922C7BF04009B83DF /* assignment1 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4F39F8AE22C5D9AE00F0B3E3 /* Sources */ = {
+		4FF8019622C7BF04009B83DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F39F8C022C5D9C900F0B3E3 /* Q0.c in Sources */,
+				4FF801A722C7BFB4009B83DF /* Q0.c in Sources */,
+				4FF801A922C7BFC0009B83DF /* Q1.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4F39F8B722C5D9AE00F0B3E3 /* Debug */ = {
+		4FF8019F22C7BF04009B83DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -162,7 +166,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -184,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		4F39F8B822C5D9AE00F0B3E3 /* Release */ = {
+		4FF801A022C7BF04009B83DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -221,7 +225,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -236,7 +240,7 @@
 			};
 			name = Release;
 		};
-		4F39F8BA22C5D9AE00F0B3E3 /* Debug */ = {
+		4FF801A222C7BF04009B83DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -244,7 +248,7 @@
 			};
 			name = Debug;
 		};
-		4F39F8BB22C5D9AE00F0B3E3 /* Release */ = {
+		4FF801A322C7BF04009B83DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -255,25 +259,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4F39F8AD22C5D9AE00F0B3E3 /* Build configuration list for PBXProject "Assignment1" */ = {
+		4FF8019522C7BF04009B83DF /* Build configuration list for PBXProject "assignment1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F39F8B722C5D9AE00F0B3E3 /* Debug */,
-				4F39F8B822C5D9AE00F0B3E3 /* Release */,
+				4FF8019F22C7BF04009B83DF /* Debug */,
+				4FF801A022C7BF04009B83DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F39F8B922C5D9AE00F0B3E3 /* Build configuration list for PBXNativeTarget "Assignment1" */ = {
+		4FF801A122C7BF04009B83DF /* Build configuration list for PBXNativeTarget "assignment1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F39F8BA22C5D9AE00F0B3E3 /* Debug */,
-				4F39F8BB22C5D9AE00F0B3E3 /* Release */,
+				4FF801A222C7BF04009B83DF /* Debug */,
+				4FF801A322C7BF04009B83DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4F39F8AA22C5D9AE00F0B3E3 /* Project object */;
+	rootObject = 4FF8019222C7BF04009B83DF /* Project object */;
 }
