@@ -1,7 +1,7 @@
 /* CS261- Assignment 1 - Q. 0*/
-/* Name:
- * Date:
- * Solution description:
+/* Name:Thomas Banghart
+ * Date:06/29/2019
+ * Solution description: Experimenting with printf() and pointers
  */
 
 #include <stdio.h>
@@ -38,6 +38,7 @@ void fooB(int* jptr){
 
 
 int main(){
+    srand(time(NULL));
     
     /*Declare an integer x and initialize it randomly to a value in [0,10] */
     int x = (rand() % 10) + 1;
