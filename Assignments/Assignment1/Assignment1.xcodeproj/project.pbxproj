@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F39F8B622C5D9AE00F0B3E3 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F39F8B522C5D9AE00F0B3E3 /* main.c */; };
+		4F39F8C022C5D9C900F0B3E3 /* Q0.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F39F8BC22C5D9C900F0B3E3 /* Q0.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		4F39F8B222C5D9AE00F0B3E3 /* Assignment1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Assignment1; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F39F8B522C5D9AE00F0B3E3 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		4F39F8BC22C5D9C900F0B3E3 /* Q0.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Q0.c; path = "../../Source Code/Assignment_1_Skeleton_Code_Files/Q0.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		4F39F8B422C5D9AE00F0B3E3 /* Assignment1 */ = {
 			isa = PBXGroup;
 			children = (
-				4F39F8B522C5D9AE00F0B3E3 /* main.c */,
+				4F39F8BC22C5D9C900F0B3E3 /* Q0.c */,
 			);
 			path = Assignment1;
 			sourceTree = "<group>";
@@ -118,7 +118,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F39F8B622C5D9AE00F0B3E3 /* main.c in Sources */,
+				4F39F8C022C5D9C900F0B3E3 /* Q0.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +162,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -221,7 +221,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
