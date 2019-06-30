@@ -9,7 +9,7 @@
 #include <math.h>
 #include <time.h>
 
-#define num_of_students 10
+#define NUM_OF_STUDENTS 10
 
 struct student{
     int id;
@@ -18,21 +18,33 @@ struct student{
 
 struct student* allocate(){
      /*Allocate memory for ten students*/
-    struct student* std = (struct student*)malloc(num_of_students*sizeof(struct student));
+    struct student* std = (struct student*)malloc(NUM_OF_STUDENTS*sizeof(struct student));
      
      /*Return the pointer*/
     return std;
 }
 
+int checkID(struct student* students, int idToCheck){
+    int i;
+    for(i = 0; i < NUM_OF_STUDENTS; i++){
+        if(students[i].id == idToCheck){
+            return 1;
+        }
+    }
+    return 0;
+}
 void generate(struct student* students){
      /*Generate random and unique IDs and random scores for ten students, 
 IDs being between 1 and 10, scores between 0 and 100*/
-    int i;
-    for(i = 0; i < num_of_students; i++){
-        students[i].id = ( rand() % 10) + 1;
-        students[i].score = (rand() % 100) + 1;
+    int i, id;
+    for(i = 0; i < NUM_OF_STUDENTS; i++){
+        do {
+            id = (rand() % 10) + 1;
+        } while (checkID(students, id));
+        
+        students[i].id = id;
+        students[i].score = rand() % (100 + 1);
     }
-     
 }
 
 void output(struct student* students){
@@ -43,7 +55,7 @@ void output(struct student* students){
               ...
               ID10 score10*/
     int i;
-    for(i = 0; i < num_of_students; i++){
+    for(i = 0; i < NUM_OF_STUDENTS; i++){
         printf("ID:%d score:%d\n", students[i].id, students[i].score);
     }
 }
@@ -53,27 +65,23 @@ void summary(struct student* students){
     int i;
     int sum = 0;
     double avg;
-    //Get minimum
+
     int min = students[0].score;
-    for(i = 1; i < num_of_students; i++){
+    int max = min;
+    for(i = 0; i < NUM_OF_STUDENTS; i++){
         if (students[i].score <= min) {
             min = students[i].score;
         }
-    }
-    printf("Minimum  score: %d\n", min);
-    //Get maximum
-    int max = min;
-    for(i = 0; i < num_of_students; i++){
-        if (students[i].score >= max) {
+        else if (students[i].score >= max) {
             max = students[i].score;
         }
+    sum += students[i].score;
     }
+    
+    avg = ((sum*1.0)/NUM_OF_STUDENTS);
+    
+    printf("Minimum  score: %d\n", min);
     printf("Max score: %d\n", max);
-    //Get average
-    for(i = 0; i < num_of_students; i++){
-        sum += students[i].score;
-    }
-    avg = ((sum*1.0)/num_of_students);
     printf("Average score: %.1f\n", avg);
 
 }
