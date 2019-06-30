@@ -1,13 +1,11 @@
 /* CS261- Assignment 1 - Q.3*/
-/* Name: 
- * Date: 
+/* Name: Thomas Banghart
+ * Date: 06/29/19
  * Solution description:
  */
 
 #include <stdio.h>
 #include <stdlib.h>
-
-
 
 char toUpperCase(char ch){
   /*Convert ch to upper case, assuming it is in lower case currently*/

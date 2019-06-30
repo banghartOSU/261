@@ -3,7 +3,6 @@
  * Date: 06/29/2019
  * Solution description: Experimenting with memory allocation and structures
  */
- 
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

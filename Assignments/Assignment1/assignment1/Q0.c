@@ -36,29 +36,29 @@ void fooB(int* jptr){
     printf("%p\n", &jptr);
 }
 
-//
-//int main(){
-//    srand(time(NULL));
-//    
-//    /*Declare an integer x and initialize it randomly to a value in [0,10] */
-//    int x = (rand() % 10);
-//    /*Print the value and address of x*/
-//    printf("%d %p\n",x, &x);
-//    
-//    /*Call fooA() with the address of x*/
-//    fooA(&x);
-//    
-//    /*Print the value of x*/
-//    printf("%d\n",x);
-//    
-//    /*Call fooB() with the address of x*/
-//    fooB(&x);
-//    
-//    /*Print the value and address of x*/
-//    printf("%d %p\n",x,&x);
-//    
-//    
-//    return 0;
-//}
-//
-//
+
+int main(){
+    srand(time(NULL));
+    
+    /*Declare an integer x and initialize it randomly to a value in [0,10] */
+    int x = (rand() % 10);
+    /*Print the value and address of x*/
+    printf("%d %p\n",x, &x);
+    
+    /*Call fooA() with the address of x*/
+    fooA(&x);
+    
+    /*Print the value of x*/
+    printf("%d\n",x);
+    
+    /*Call fooB() with the address of x*/
+    fooB(&x);
+    
+    /*Print the value and address of x*/
+    printf("%d %p\n",x,&x);
+    
+    
+    return 0;
+}
+
+
