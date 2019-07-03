@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../assignment1/Q0.c">
-   </FileRef>
-   <FileRef
       location = "self:assignment1.xcodeproj">
    </FileRef>
 </Workspace>

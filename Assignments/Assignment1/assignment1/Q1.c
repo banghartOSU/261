@@ -89,26 +89,26 @@ void deallocate(struct student* stud){
      /*Deallocate memory from stud*/
     free(stud);
 }
-
-int main(){
-    srand(time(NULL));
-    struct student* stud = NULL;
-    
-    /*Call allocate*/
-    stud = allocate();
-    
-    /*Call generate*/
-    generate(stud);
-    
-    /*Call output*/
-    output(stud);
-    
-    /*Call summary*/
-    summary(stud);
-    
-    /*Call deallocate*/
-    deallocate(stud);
-
-    return 0;
-}
+//
+//int main(){
+//    srand(time(NULL));
+//    struct student* stud = NULL;
+//    
+//    /*Call allocate*/
+//    stud = allocate();
+//    
+//    /*Call generate*/
+//    generate(stud);
+//    
+//    /*Call output*/
+//    output(stud);
+//    
+//    /*Call summary*/
+//    summary(stud);
+//    
+//    /*Call deallocate*/
+//    deallocate(stud);
+//
+//    return 0;
+//}
 
