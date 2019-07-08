@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+#include <assert.h>
 
 #define NUM_OF_STUDENTS 10
 
@@ -54,8 +55,9 @@ void output(struct student* students){
               ...
               ID10 score10*/
     int i;
+    printf("ID Score\n== =====\n");
     for(i = 0; i < NUM_OF_STUDENTS; i++){
-        printf("ID:%d score:%d\n", students[i].id, students[i].score);
+        printf("%*d%*d\n", 2, students[i].id, 5, students[i].score);
     }
 }
 
@@ -79,36 +81,35 @@ void summary(struct student* students){
     
     avg = ((sum*1.0)/NUM_OF_STUDENTS);
     
-    printf("Minimum  score: %d\n", min);
-    printf("Max score: %d\n", max);
-    printf("Average score: %.1f\n", avg);
+    printf("Minimum: %d  Maximum: %d  Average: %.2f\n", min, max, avg);
 
 }
 
 void deallocate(struct student* stud){
      /*Deallocate memory from stud*/
+    assert(stud != 0);
     free(stud);
 }
-//
-//int main(){
-//    srand(time(NULL));
-//    struct student* stud = NULL;
-//    
+
+int main(){
+    srand(time(NULL));
+    struct student* stud = 0;
+    
 //    /*Call allocate*/
-//    stud = allocate();
-//    
+    stud = allocate();
+    
 //    /*Call generate*/
-//    generate(stud);
-//    
-//    /*Call output*/
-//    output(stud);
-//    
-//    /*Call summary*/
-//    summary(stud);
-//    
-//    /*Call deallocate*/
-//    deallocate(stud);
+    generate(stud);
 //
-//    return 0;
-//}
+//    /*Call output*/
+    output(stud);
+//
+//    /*Call summary*/
+    summary(stud);
+    
+    /*Call deallocate*/
+    deallocate(stud);
+
+    return 0;
+}
 

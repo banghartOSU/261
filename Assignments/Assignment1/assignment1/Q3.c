@@ -67,15 +67,15 @@ void cleanUnderscores (char* word){
             removeCharAt(word, stringLength(word)-1);
 }
 
-int countWords(char* word){
+int countUnderscore(char* word){
     int i;
     int numOfUnderscores = 0;
     for(i = 0; i < stringLength(word); i++){
         if(word[i] == 95)
             numOfUnderscores++;
     }
-    //return the number of underscores times 2
-    return 2 * numOfUnderscores;
+    //return the number of underscores
+    return numOfUnderscores;
 }
 
 
@@ -95,7 +95,7 @@ void camelCase(char* word){
 int main(){
     //Dynamically allocate char array so that the string is mutable.
     char * word = (char*) malloc(sizeof(char)* MAX_CHAR_SIZE);
-	/*Read the string from the keyboard*/
+    /*Read the string from the keyboard*/
     printf("Please enter your word:\n");
     scanf("%[^\n]s", word);
     //Clean up the input by converting all nonletters to '_'
@@ -107,16 +107,17 @@ int main(){
     //Remove multiple '_'
     cleanUnderscores(word);
     //We can safely count words at this point and determine if there are more than one word.
-    if(countWords(word) < 2){
+    if(countUnderscore(word) < 1){
         printf("invalid input string\n");
+        free(word);
         exit(1);
     }
-	//Call camelCase if the input is valid
+    //Call camelCase if the input is valid
     camelCase(word);
-	/*Print the new string*/
+    /*Print the new string*/
     printf("%s\n",word);
     
     free(word);
-	return 0;
+    return 0;
 }
 
