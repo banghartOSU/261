@@ -1,0 +1,97 @@
+1)	How many cost units are spent in the entire process of performing 50 consecutive push operations on an empty array which starts 
+	out at capacity 8, assuming that the array will double in capacity each time a new item is added to an already full dynamic array? As N (ie. the number of pushes) grows large, under this strategy for resizing, what is the average big-oh complexity for a push?
+	*******************************************************************************************************************************
+
+Average big-oh complexity: O(1)+
+Number of cost units: 106
+
+Proof:
+	Base case: (size: 0, capacity: 8, cost_units: 0, sum_of_cost_units: 0)
+	
+	Add 8 elements: (size: 8, capacity: 8, cost_units: 8, sum_of_cost_units: 8)
+	Add 1 element, resize: (size: 9, capacity: 16, cost_units: 9, sum_of_cost_units: 17)
+	Add 7 elements: (size: 16, capacity: 16, cost_units: 7, sum_of_cost_units: 24)
+	Add 1 element, resize: (size: 17, capacity: 32, cost_units: 17, sum_of_cost_units: 41)
+	Add 15 elements: (size: 32, capacity: 32, cost_units: 15, sum_of_cost_units: 56)
+	Add 1 element, resize: (size: 33, capacity: 64, cost_units: 33, sum_of_cost_units: 89)
+	Add 17 elements: (size: 50, capacity: 64, cost_units: 17, sum_of_cost_units: 106)
+
+To answer this question, it is best to make a small table that will keep track of number of operations each "push" requires as well as the running total of cost units this would require. In doing so we find that as n nears infinity, we should expect a nearly constant big-oh complexity. Specifically, O(1)+ since when we attempt to "push()" an element into a full array we must first copy the elements from the original one into a newly created one with a larger capacity. This is an O(n) action which depends on how many elements we need to copy over. However, since when we resize the array, we also double the capacity, we will need to resize less frequently the more elements we choose to add. 
+
+push()/size  capacity  operations 	   cost units 
+===========  ========  ========== 	  ============
+0		8		0		0 ---- Base Case				
+1		8		1		1
+2		8		1		2
+3		8		1		3
+4		8		1		4
+5		8		1		5
+6		8		1		6
+7		8		1 		7
+8		8		1		8
+9---------------16----------8 + 1 --------------17	
+10		16		1		18
+11		16		1		19
+12		16		1		20
+13		16		1		21
+14		16		1		22
+15		16		1		23		
+16		16		1		24
+17--------------32----------16 + 1--------------41	
+18		32		1		42
+19		32		1		43
+20		32		1		44
+21		32		1		45
+22		32		1		46
+23		32		1		47
+24		32		1		48
+25		32		1		49	
+26		32		1		50
+27		32		1		51
+28		32		1		52
+29		32		1		53
+30		32		1		54
+31		32		1		55
+32		32		1		56
+33--------------64----------32 + 1--------------89
+34		64		1		90
+35		64		1		91
+36		64		1		92
+37		64		1		93
+38		64		1		94
+39		64		1		95
+40		64		1		96
+41		64		1		97
+42		64		1		98
+43		64		1		99
+44		64		1		100
+45		64		1		101
+46		64		1		102
+47		64		1		103
+48		64		1		104
+49		64		1		105
+50		64		1		106
+
+2) 	How many cost units are spent in the entire process of performing 50 consecutive push operations on an empty array which starts out at 	
+	capacity 8, assuming that the array will grow by a constant 2 spaces each time a new item is added to an already full dynamic array? As N (ie. the number of pushes) grows large, under this strategy for resizing, what is the average big-oh complexity for a push?
+	*******************************************************************************************************************************************
+
+Cost units: 506
+Big-oh complexity: O(n^2)
+
+
+Proof: 
+	Base case: (size: 0, capacity: 8, cost_units: 0, sum_of_cost_units: 0)
+
+	Add 8 elements: (size: 8, capacity: 8, cost_units: 8, sum_of_cost_units: 8)
+	Add 1 element:  (size: 9, capacity: 10, cost_units: 9, sum_of_cost_units: 17)
+	Add 2 elements, resize:  (size: 11, capacity: 12, cost_units: 11 , sum_of_cost_units: 28)
+	Add 2 elements, resize: (size: 13, capacity: 14, cost_units: 13, sum_of_cost_units: 33)
+	Add 2 elements, resize: (size: 15, capacity: 16, cost_units: 15, sum_of_cost_units: 48)
+	...
+	Add 2 elements (size: 50, capacity: 50, cost_units: 1, sum_of_cost_units: )
+
+
+
+
+
