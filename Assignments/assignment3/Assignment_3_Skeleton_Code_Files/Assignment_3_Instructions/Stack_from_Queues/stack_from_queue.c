@@ -110,7 +110,7 @@ void listQueueAddBack (struct Queue* queue, TYPE value)
     assert(queue != 0);
     struct Link *newLink = (struct Link *) malloc(sizeof(struct Link)); assert(newLink != 0);
     newLink->value = value;
-    newLink->next = NULL;
+    newLink->next = 0;
     queue->tail->next = newLink;
     queue->tail= newLink;
 }
@@ -145,14 +145,14 @@ TYPE listQueueRemoveFront(struct Queue* queue)
     if(queue->head->next == queue->tail)
     {
         queue->tail = queue->head;
-        queue->head->next = NULL;
+        queue->head->next = 0;
     }
     else
     {
     queue->head->next = queue->head->next->next;
     }
     free(linkToRemove);
-    linkToRemove = NULL;
+    linkToRemove = 0;
     return valueToReturn;
 }
 
@@ -208,7 +208,7 @@ struct Stack* listStackFromQueuesCreate()
     newStack->q1 = listQueueCreate();
     newStack->q2 = listQueueCreate();
     return newStack;
-};
+}
 
 /**
     Deallocates every link in both queues contained in the stack,
@@ -329,7 +329,6 @@ void assertTrue(int pred, char* msg)
     else
         printf("\tFAILED\n");
 }
-
 int main()
 {
     struct Stack* s = listStackFromQueuesCreate();
@@ -364,3 +363,4 @@ int main()
 
     return 0;
 }
+

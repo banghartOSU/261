@@ -1,0 +1,98 @@
+void initBST(struct BinarySearchTree *tree) { tree->size = 0; tree->root = 0: }
+
+void addBST(struct BinarySearchTree *tree, TYPE newValue) {
+   tree->root = _nodeAddBST(tree->root, newValue);  tree->size++; }
+
+int sizeBST (struct BinarySearchTree *tree) { return tree->size; }
+
+struct Node * _nodeAddBST (struct Node *current, TYPE newValue) {
+   if(current == 0) 
+    {
+      struct Node *nodeToReturn = malloc(sizeof(struct Node));
+      nodeToReturn->value = newValue; 
+      nodeToReturn->left = 0; nodeToReturn->right = 0;
+      return nodeToReturn; 
+    } 
+    else if(newValue <= current->value)
+    {
+      current->left = _nodeAddBST(current->left, newValue);
+    }
+    else 
+    {
+      current->right = _nodeAddBST(current->right, newValue);
+    }
+    return current;
+}
+
+int containsBST (struct BinarySearchTree *tree, TYPE d) {
+  assert(tree != 0);
+  struct Node *current = tree->root;
+  while(itr != 0)
+  {
+    if(current->value == d) {return 1;}
+    if(d < current->value) {itr = itr->left}
+    else {itr = itr->right;}
+  }
+  return 0;
+
+
+}
+void removeBST (struct BinarySearchTree *tree, TYPE d) {
+   if (containsBST(tree, d) 
+   {
+      tree->root = _nodeRemoveBST(tree->root, d);
+      tree->size--;
+    }
+
+TYPE _leftMostChild (struct Node * current) {
+  while(current->left != 0)
+  {
+    current = current->left
+  }
+  return current->value;
+}
+
+struct node * _removeLeftmostChild (struct Node *current) {
+    struct Node * lastNode = 0,   //This will be the parent of the currNode
+                * currNode = current;
+    
+    assert(current != 0);
+
+    /* Locate leftmost node to current */
+    while(currNode->left != 0){     
+        lastNode = current;         //Parent of currNode
+        currNode = currNode->left;  //Leftmost node of current
+    }
+    
+    /*  The leftmost child may have children to the right - save them by 
+        pointing parent of leftmost's left-pointer to the right child of 
+        the leftmost child. */
+    if(currNode->right != 0){
+        if(lastNode != 0)
+            lastNode->left = currNode->right;    //Save children to the right
+        else
+            lastNode = currNode->right;     //Save children to the right
+        
+        return lastNode;
+    }
+    else if(current != currNode){
+        /* Clear Node values and free memory */
+        currNode->value = 0;
+        currNode->left = 0;
+        currNode->right = 0;
+        free(currNode);
+        current->left = 0;
+
+        return current;
+    }
+    
+    return 0;
+}
+
+struct Node *  _nodeRemoveBST (struct Node * current, TYPE d) {
+    if(current->value == d)
+    {
+      if(current->right == 0) {return current->left;}
+    }
+ 
+}
